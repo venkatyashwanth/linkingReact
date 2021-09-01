@@ -1,0 +1,51 @@
+Purpose: To make a link between front end and back end. 
+
+---------------------------
+Run the following command for reactApp:-
+npx create-react-app filename 
+--> This will install the react set up (and takes some time)
+
+Run the following command for nodeJS:- 
+#npx express-generator filename
+#npm install 
+-->command to install the packages in dependencies present in package.json file. 
+
+#npm start 
+--> starts expressJS server, defaultly on localhost: 3000
+--> Ref image1, image2. 
+
+In api(expressJS filename), under bin folder we can find www, open file and change the port number to 9000. 
+? Because by default both react and express are running in the same port. 
+--> Ref image3 and image4
+
+---------------------------
+ExpressJS:- filename: api 
+1. In the api folder,under routes folder(ref: image5) create js file (testApi.js).
+write the code in the file, link will be provided. 
+2. Open app.js file. (ref: image6) and the lines 
+#testAPIRouter = require('./routes/testAPI');
+#app.use('/testAPI',testAPIRouter);
+(ref: image7).
+3. Save the files. Run following command. 
+#npm start 
+server now will run on port 9000. (ref: image8). Here you can find the information that you send in testApi.js file. 
+
+
+---------------------------
+ReactJS:- filename: client 
+1. Open app.js file in src folder and write the code you can find it in the shared file. 
+
+---------------------------
+ExpressJS:- 
+Enable cross origin script sharing (cors), so that we share information between client and server. 
+#npm install --save cors
+
+Add the following line in app.js file. (ref: image9)
+#app.use(cors());
+
+---------------------------
+Now run the two servers simultaneously. (ref: image10)
+
+
+
+
